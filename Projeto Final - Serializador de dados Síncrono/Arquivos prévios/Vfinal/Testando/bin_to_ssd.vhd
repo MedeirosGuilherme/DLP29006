@@ -1,0 +1,51 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+Entity bin_to_ssd is
+--generic (N: natural := 4; MAX: natural := 16);
+
+
+port (count_in : in character;
+ssd_out: out std_logic_vector(0 to 6));
+
+
+end entity;
+
+architecture ifsc of bin_to_ssd is
+begin
+
+process(count_in) is
+		variable ssd_t: std_logic_vector(0 to 6);
+		begin
+			case count_in is
+			when '0' => ssd_t := "1111110"; --0
+			when '1' => ssd_t := "0110000"; --1
+			when '2' => ssd_t := "1101101"; --2
+			when '3' => ssd_t := "1111001"; --3
+			when '4' => ssd_t := "0110011"; --4
+			when '5' => ssd_t := "1011011"; --5
+			when '6' => ssd_t := "1011111"; --6
+			when '7' => ssd_t := "1110000"; --7
+			when '8' => ssd_t := "1111111"; --8
+			when '9' => ssd_t := "1111011"; --9
+			when 'A' => ssd_t := "1110111"; -- A
+			when 'b' => ssd_t := "0011111"; -- b
+			when 'C' => ssd_t := "1001110"; -- C
+			when 'd' => ssd_t := "0111101"; -- d
+			when 'E' => ssd_t := "1001111"; -- E
+			when 'F' => ssd_t := "1000111"; -- F
+			when 'H' => ssd_t := "0110111"; -- H
+			when 'I' => ssd_t := "0000110"; -- I
+			when 'J' => ssd_t := "0111000"; -- J
+			when 'L' => ssd_t := "0001110"; -- L
+			when 'P' => ssd_t := "1100111"; -- P
+			when 'U' => ssd_t := "0111110";-- U
+			when others => ssd_t := "1111111";
+			end case;		 
+			
+			ssd_out <= not ssd_t;
+			
+end process;
+
+end architecture;

@@ -1,0 +1,26 @@
+Especificação
+
+O sistema deve receber um caracter ASCII pela porta paralela exibí-lo em um display sete segmentos, serializar e adicionar os start e stop bits e ser adicionado em um buffer para que os bits sejam enviados de um por um na velocidade de um baudrate que será gerado por um componente, este componente seleciona o baudrate por uma chave. O sistema também deve receber estes dados por um receptor serial, logo na entrada tem um Mux para tratar o baudrate e então é feito a retirada dos start e stop bits e exibido o caracter em um display de sete segmentos.
+
+A nível de VHDL, o sistema possuirá estes componentes:
+
+Um Conversor Paralelo-Serial: Faz a conversão do dado de entrada e coloca o valor convertido na saída.
+Um Conversor Serial-Paralelo: Faz a conversão do dado de entrada e coloca o valor convertido na saída.
+Dois Geradores de Baud Rate: Gera um baudrate conforme uma entrada, chave.
+Um Gerador de Paridade: Gera a paridade também a partir de uma chave.
+Um Detector de Paridade: Detecta a paridade do dado de entrada, para lê-lo corretamente.
+Um Circuito de Entrada de Dados: Circuito que recebe o dado, armazenando em um buffer de entrada.
+Um Circuito de Saída de Dados: Buffer de saída de dados, colocando no barramento de saída um bit por vez conforme o baudrate.
+
+O hardware que será utilizado para implementação serão duas FPGA DE2-115, nas quais estarão rodando o mesmos sistema, para validar, ambas devem compartilhar o mesmo clock, sendo assim elas estarão conectadas desta forma: Tx da primeira no Rx da segunda e clock da primeira no clock da segunda, outro teste realizado é ligar o Tx da primeira no Rx da própria fazendo uma interface de loopback para testar se o dado está saindo corretamente. A entrada será a porta paralela ligada em um PC.
+
+Assim validamos se o dados sai corretamente e se é recebido corretamente.
+
+
+
+
+
+
+
+
+

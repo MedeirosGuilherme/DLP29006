@@ -1,0 +1,98 @@
+Restore Archived Project report for serial
+Fri Jul  5 16:17:32 2019
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Fri Jul  5 16:17:31 2019 ;
+; Revision Name                   ; serial                                ;
+; Top-level Entity Name           ; serial                                ;
+; Family                          ; Cyclone                               ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored '/home/guilherme.s17/PROJETO FINAL FINAL/v7.qar' into the '/home/guilherme.s17/Testando/' directory
+Info: Generated report 'serial.restore.rpt'
+Info (23030): Evaluation of Tcl script /opt/altera/13.0sp1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II 32-bit Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 211 megabytes
+    Info: Processing ended: Fri Jul  5 16:17:32 2019
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++---------------------------------------------------+
+; Files Restored                                    ;
++---------------------------------------------------+
+; File Name                                         ;
++---------------------------------------------------+
+; Parallel_to_Serial_converter.vhd                  ;
+; SerialOut.vwf                                     ;
+; address_gen.vhd                                   ;
+; assignment_defaults.qdf                           ;
+; baud_gen.vhd                                      ;
+; bin_to_ssd.vhd                                    ;
+; data_in.vhd                                       ;
+; db/serial.sim.vwf                                 ;
+; incremental_db/compiled_partitions/serial.db_info ;
+; serial.qpf                                        ;
+; serial.qsf                                        ;
+; serial.vhd                                        ;
+; serial_receiver.vhd                               ;
+; simulation/modelsim/PtoS_wave.do                  ;
+; simulation/modelsim/address_gen_wave.do           ;
+; simulation/modelsim/baud_wave.do                  ;
+; simulation/modelsim/binSSD_wave.do                ;
+; simulation/modelsim/data_in_wave.do               ;
+; simulation/modelsim/tb_PtoS.do                    ;
+; simulation/modelsim/tb_address_gen.do             ;
+; simulation/modelsim/tb_baud.do                    ;
+; simulation/modelsim/tb_bin_SSD.do                 ;
+; simulation/modelsim/tb_data_in.do                 ;
+; tb.vwf                                            ;
+; tb_data_in.vwf                                    ;
++---------------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

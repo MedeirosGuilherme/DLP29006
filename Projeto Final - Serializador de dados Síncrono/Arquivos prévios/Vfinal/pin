@@ -1,0 +1,27 @@
+top_clk -> (clock da maquina) -> PIN_Y2
+
+top_rst -> botao -> KEY[3] -> PIN_R24
+
+sel_baud -> Duas chaves -> SW[16] PIN_Y24 SW[17] PIN_Y23
+
+top_init -> uma chave -> SW[0] PIN_AB28
+
+top_next_adderss -> botao -> KEY[0] PIN_M23
+
+top_sel_parity -> uma chave SW8 PIN_AC25
+
+
+top_led_boud_out -> 4 leds seguidos LEDR17 PINH15, LEDR16 PIN_G16, LEDR15 PIN_G15, LEDR14 PIN_F15
+
+top_parity_led -> um led > LEDR8 PIN_J17
+
+top_led_tx -> um led LEDG0 PIN_E21
+
+top_tx_out -> saida PIN_AC15
+
+top_baud_out -> saida PIN_AB22
+
+ssd1 -> PIN_G18, F22, E17, L26, L25, J22, H22
+ssd2 -> PIN_M25, Y22, W21, W22, W25, U23, U24
+ssd3 -> PIN_AA25, AA26, Y25, W26, Y26, W27, W28
+ssd4 -> PIN_AB19, AA19, AG21, AH21, AE19, AF19, AE18

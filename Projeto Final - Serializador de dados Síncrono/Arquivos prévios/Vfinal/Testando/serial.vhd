@@ -1,0 +1,212 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity serial is
+	port
+	(
+		-- Input ports
+		top_rst	: in  std_logic;
+		top_sel_parity: in std_logic;
+		top_sel_baud: in std_logic_vector(1 downto 0);
+		top_next_adress: std_logic;
+		top_init , top_clk: in std_logic;
+		top_led_tx : out std_logic;
+		
+		-- Output ports
+		top_tx_out	: out std_logic;
+		top_led_parity : out std_logic;
+		top_baud_out	: out std_logic;
+		top_ssd_out1: out std_logic_vector(0 to 6);
+		top_ssd_out2: out std_logic_vector(0 to 6);
+		top_ssd_out3: out std_logic_vector(0 to 6);
+		top_ssd_out4: out std_logic_vector(0 to 6);
+		top_led_baud_out: out std_logic_vector(3 downto 0)
+	);
+end serial;
+
+architecture estrutura of serial is
+
+---component declarations
+
+component data_in is
+
+	port
+	(
+		-- Input ports
+		selChar	: in  std_logic_vector(4 downto 0);
+	
+		baud_data : in std_logic;
+
+		rst: in std_logic;
+		-- Output ports
+		serial_out	: out character;
+		ssd_out1, ssd_out2, ssd_out3, ssd_out4: out character		
+	);
+end component;
+
+
+component address_gen is
+
+	port
+	(
+		-- Input ports
+		next_address : in  std_logic;
+		init : in std_logic;
+		clk_in, rst: in std_logic;
+
+
+		-- Output ports
+		address_pos	: out std_logic_vector (4 downto 0)
+	);
+end component;
+
+component baud_gen is
+
+	port
+	(
+		-- Input ports
+		sel_baud	: in std_logic_vector(1 downto 0);
+		rst, clk_in : std_logic;
+
+		-- Output ports
+		baud_out	: out std_logic;
+		baud_led	: out std_logic_vector(3 downto 0) 
+	);
+end component;
+
+component bin_to_ssd is
+--generic (N: natural := 4; MAX: natural := 16);
+
+port (count_in : in character;
+ssd_out: out std_logic_vector(0 to 6));
+
+end component;
+
+
+
+component Parallel_to_Serial_converter is
+	port
+	(
+		-- Input ports
+		ascii_in	: character;
+		sel_parity: in std_logic;
+		baudrate, rst: in std_logic;
+		
+		-- Output ports
+	
+		tx_out, tx_led	: out std_logic;
+		parity_led: out std_logic
+	);
+end component;
+
+--- signal declarations
+signal selChar_signal : std_logic_vector (4 downto 0);
+signal data_in_ssd_out_signal: std_logic_vector(6 downto 0);
+signal data_in_count_out_signal: std_logic_vector(6 downto 0);
+signal serial_out_signal : character;
+signal next_address_signal : std_logic_vector (4 downto 0);
+signal baud_out_signal : std_logic;
+signal ssd_out_1_signal, ssd_out_2_signal, ssd_out_3_signal, ssd_out_4_signal : character;
+signal top_rst_signal, top_clk_signal :std_logic;
+
+begin
+
+----component instantiation
+
+
+data_in_1 : data_in --ok
+
+	port map 
+	(
+		selChar => next_address_signal,
+		baud_data => baud_out_signal,
+		rst => top_rst_signal,
+		serial_out => serial_out_signal,
+		ssd_out1 =>  ssd_out_1_signal,
+		ssd_out2 =>  ssd_out_2_signal,
+		ssd_out3 =>  ssd_out_3_signal,
+		ssd_out4 =>  ssd_out_4_signal
+	);
+	
+address_gen_1 : address_gen 
+
+	port map 
+	(
+		next_address => top_next_adress,
+		init => top_init,
+		clk_in => top_clk_signal,
+		rst => top_rst_signal,
+		address_pos => next_address_signal
+
+	);
+	
+
+	
+bin_to_ssd_1 : bin_to_ssd
+
+	port map 
+	(
+		count_in => ssd_out_1_signal,
+		ssd_out => top_ssd_out1
+
+	);
+
+bin_to_ssd_2 : bin_to_ssd
+
+	port map 
+	(
+		count_in => ssd_out_2_signal,
+		ssd_out => top_ssd_out2
+
+	);
+	
+bin_to_ssd_3 : bin_to_ssd
+
+	port map 
+	(
+		count_in => ssd_out_3_signal,
+		ssd_out => top_ssd_out3
+
+	);
+	
+bin_to_ssd_4 : bin_to_ssd
+
+	port map 
+	(
+		count_in => ssd_out_4_signal,
+		ssd_out => top_ssd_out4
+	);
+	
+	
+
+
+Parallel_to_Serial_converter_1 : Parallel_to_Serial_converter 
+
+	port map 
+	(
+		ascii_in	=> serial_out_signal ,
+		sel_parity => top_sel_parity,
+		baudrate => baud_out_signal,
+		rst => top_rst_signal,
+		tx_led => top_led_tx,
+		tx_out => top_tx_out,
+		parity_led => top_led_parity 
+
+	);
+	
+
+baud_gen_1 : baud_gen 
+	port map 
+	(
+		sel_baud	=> top_sel_baud,
+		baud_out	=> baud_out_signal,
+		baud_led => top_led_baud_out,
+		rst => top_rst_signal,
+		clk_in => top_clk_signal
+	);
+	
+	top_clk_signal <= top_clk;
+	top_baud_out <= baud_out_signal;
+	top_rst_signal <= not top_rst;
+	
+end estrutura;

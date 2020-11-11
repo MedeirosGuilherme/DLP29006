@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'top_clk'
+Slack : -3.032
+TNS   : -82.260
+
+Type  : Slow 1200mV 85C Model Setup 'baud_gen:baud_gen_1|clk_t'
+Slack : -2.537
+TNS   : -29.556
+
+Type  : Slow 1200mV 85C Model Hold 'top_clk'
+Slack : -0.072
+TNS   : -0.072
+
+Type  : Slow 1200mV 85C Model Hold 'baud_gen:baud_gen_1|clk_t'
+Slack : 0.407
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'top_clk'
+Slack : -3.000
+TNS   : -49.260
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'baud_gen:baud_gen_1|clk_t'
+Slack : -1.285
+TNS   : -28.270
+
+Type  : Slow 1200mV 0C Model Setup 'top_clk'
+Slack : -2.691
+TNS   : -71.708
+
+Type  : Slow 1200mV 0C Model Setup 'baud_gen:baud_gen_1|clk_t'
+Slack : -2.236
+TNS   : -25.110
+
+Type  : Slow 1200mV 0C Model Hold 'top_clk'
+Slack : -0.028
+TNS   : -0.028
+
+Type  : Slow 1200mV 0C Model Hold 'baud_gen:baud_gen_1|clk_t'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'top_clk'
+Slack : -3.000
+TNS   : -49.260
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'baud_gen:baud_gen_1|clk_t'
+Slack : -1.285
+TNS   : -28.270
+
+Type  : Fast 1200mV 0C Model Setup 'top_clk'
+Slack : -1.001
+TNS   : -22.625
+
+Type  : Fast 1200mV 0C Model Setup 'baud_gen:baud_gen_1|clk_t'
+Slack : -0.680
+TNS   : -6.350
+
+Type  : Fast 1200mV 0C Model Hold 'top_clk'
+Slack : -0.092
+TNS   : -0.092
+
+Type  : Fast 1200mV 0C Model Hold 'baud_gen:baud_gen_1|clk_t'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'top_clk'
+Slack : -3.000
+TNS   : -49.719
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'baud_gen:baud_gen_1|clk_t'
+Slack : -1.000
+TNS   : -22.000
+
+------------------------------------------------------------

@@ -1,0 +1,139 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# Date created = 20:14:34  June 17, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		serial_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY serial
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:14:34  JUNE 17, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+set_global_assignment -name SEARCH_PATH simulation/modelsim/ -tag from_archive
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE tb.vwf
+set_global_assignment -name VHDL_FILE Parallel_to_Serial_converter.vhd
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/PtoS_wave.do
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/tb_PtoS.do
+set_global_assignment -name VHDL_FILE bin_to_ssd.vhd
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/binSSD_wave.do
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/tb_bin_SSD.do
+set_global_assignment -name VHDL_FILE baud_gen.vhd
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/baud_wave.do
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/tb_baud.do
+set_global_assignment -name VHDL_FILE address_gen.vhd
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/tb_address_gen.do
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/address_gen_wave.do
+set_global_assignment -name VHDL_FILE data_in.vhd
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/data_in_wave.do
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/tb_data_in.do
+set_global_assignment -name VHDL_FILE serial.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE tb.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE tb_data_in.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE SerialOut.vwf
+set_global_assignment -name VHDL_FILE serial_receiver.vhd
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_location_assignment PIN_AB22 -to top_baud_out
+set_location_assignment PIN_Y2 -to top_clk
+set_location_assignment PIN_AB28 -to top_init
+set_location_assignment PIN_H15 -to top_led_baud_out[3]
+set_location_assignment PIN_G16 -to top_led_baud_out[2]
+set_location_assignment PIN_G15 -to top_led_baud_out[1]
+set_location_assignment PIN_F15 -to top_led_baud_out[0]
+set_location_assignment PIN_J17 -to top_led_parity
+set_location_assignment PIN_E21 -to top_led_tx
+set_location_assignment PIN_M23 -to top_next_adress
+set_location_assignment PIN_R24 -to top_rst
+set_location_assignment PIN_Y24 -to top_sel_baud[1]
+set_location_assignment PIN_Y23 -to top_sel_baud[0]
+set_location_assignment PIN_AC25 -to top_sel_parity
+set_location_assignment PIN_G18 -to top_ssd_out1[0]
+set_location_assignment PIN_F22 -to top_ssd_out1[1]
+set_location_assignment PIN_E17 -to top_ssd_out1[2]
+set_location_assignment PIN_L26 -to top_ssd_out1[3]
+set_location_assignment PIN_L25 -to top_ssd_out1[4]
+set_location_assignment PIN_J22 -to top_ssd_out1[5]
+set_location_assignment PIN_H22 -to top_ssd_out1[6]
+set_location_assignment PIN_M25 -to top_ssd_out2[0]
+set_location_assignment PIN_Y22 -to top_ssd_out2[1]
+set_location_assignment PIN_W21 -to top_ssd_out2[2]
+set_location_assignment PIN_W22 -to top_ssd_out2[3]
+set_location_assignment PIN_W25 -to top_ssd_out2[4]
+set_location_assignment PIN_U23 -to top_ssd_out2[5]
+set_location_assignment PIN_U24 -to top_ssd_out2[6]
+set_location_assignment PIN_AA25 -to top_ssd_out3[0]
+set_location_assignment PIN_AA26 -to top_ssd_out3[1]
+set_location_assignment PIN_Y25 -to top_ssd_out3[2]
+set_location_assignment PIN_W26 -to top_ssd_out3[3]
+set_location_assignment PIN_Y26 -to top_ssd_out3[4]
+set_location_assignment PIN_W27 -to top_ssd_out3[5]
+set_location_assignment PIN_W28 -to top_ssd_out3[6]
+set_location_assignment PIN_AB19 -to top_ssd_out4[0]
+set_location_assignment PIN_AA19 -to top_ssd_out4[1]
+set_location_assignment PIN_AG21 -to top_ssd_out4[2]
+set_location_assignment PIN_AH21 -to top_ssd_out4[3]
+set_location_assignment PIN_AE19 -to top_ssd_out4[4]
+set_location_assignment PIN_AF19 -to top_ssd_out4[5]
+set_location_assignment PIN_AE18 -to top_ssd_out4[6]
+set_location_assignment PIN_AC15 -to top_tx_out
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_instance_assignment -name IO_STANDARD "3.0-V LVTTL" -to top_baud_out
+set_instance_assignment -name IO_STANDARD "3.0-V LVTTL" -to top_tx_out
+set_instance_assignment -name IO_STANDARD "3.0-V LVTTL" -to top_ssd_out4[0]
+set_instance_assignment -name IO_STANDARD "3.0-V LVTTL" -to top_ssd_out4[1]
+set_instance_assignment -name IO_STANDARD "3.0-V LVTTL" -to top_ssd_out4[2]
+set_instance_assignment -name IO_STANDARD "3.0-V LVTTL" -to top_ssd_out4[3]
+set_instance_assignment -name IO_STANDARD "3.0-V LVTTL" -to top_ssd_out4[4]
+set_instance_assignment -name IO_STANDARD "3.0-V LVTTL" -to top_ssd_out4[5]
+set_instance_assignment -name IO_STANDARD "3.0-V LVTTL" -to top_ssd_out4[6]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

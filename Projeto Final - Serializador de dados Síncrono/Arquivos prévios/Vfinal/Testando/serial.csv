@@ -1,0 +1,65 @@
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+# File: /home/guilherme.s17/Testando/serial.csv
+# Generated on: Fri Jul  5 17:07:49 2019
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+To,Direction,Location,I/O Bank,VREF Group,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair
+top_baud_out,Output,PIN_AB22,4,B4_N0,,,,,
+top_clk,Input,PIN_Y2,2,B2_N0,,,,,
+top_init,Input,PIN_AB28,5,B5_N1,,,,,
+top_led_baud_out[3],Output,PIN_H15,7,B7_N2,,,,,
+top_led_baud_out[2],Output,PIN_G16,7,B7_N2,,,,,
+top_led_baud_out[1],Output,PIN_G15,7,B7_N2,,,,,
+top_led_baud_out[0],Output,PIN_F15,7,B7_N2,,,,,
+top_led_parity,Output,PIN_J17,7,B7_N2,,,,,
+top_led_tx,Output,PIN_E21,7,B7_N0,,,,,
+top_load_in,Input,,,,,,,,
+top_next_adress,Input,PIN_M23,6,B6_N2,,,,,
+top_rst,Input,PIN_R24,5,B5_N0,,,,,
+top_sel_baud[1],Input,PIN_Y24,5,B5_N2,,,,,
+top_sel_baud[0],Input,PIN_Y23,5,B5_N2,,,,,
+top_sel_parity,Input,PIN_AC25,5,B5_N2,,,,,
+top_ssd_out1[0],Output,PIN_G18,7,B7_N2,,,,,
+top_ssd_out1[1],Output,PIN_F22,7,B7_N0,,,,,
+top_ssd_out1[2],Output,PIN_E17,7,B7_N2,,,,,
+top_ssd_out1[3],Output,PIN_L26,6,B6_N1,,,,,
+top_ssd_out1[4],Output,PIN_L25,6,B6_N1,,,,,
+top_ssd_out1[5],Output,PIN_J22,6,B6_N0,,,,,
+top_ssd_out1[6],Output,PIN_H22,6,B6_N0,,,,,
+top_ssd_out2[0],Output,PIN_M25,6,B6_N2,,,,,
+top_ssd_out2[1],Output,PIN_Y22,5,B5_N0,,,,,
+top_ssd_out2[2],Output,PIN_W21,5,B5_N1,,,,,
+top_ssd_out2[3],Output,PIN_W22,5,B5_N0,,,,,
+top_ssd_out2[4],Output,PIN_W25,5,B5_N1,,,,,
+top_ssd_out2[5],Output,PIN_U23,5,B5_N1,,,,,
+top_ssd_out2[6],Output,PIN_U24,5,B5_N0,,,,,
+top_ssd_out3[0],Output,PIN_AA25,5,B5_N1,,,,,
+top_ssd_out3[1],Output,PIN_AA26,5,B5_N1,,,,,
+top_ssd_out3[2],Output,PIN_Y25,5,B5_N1,,,,,
+top_ssd_out3[3],Output,PIN_W26,5,B5_N1,,,,,
+top_ssd_out3[4],Output,PIN_Y26,5,B5_N1,,,,,
+top_ssd_out3[5],Output,PIN_W27,5,B5_N1,,,,,
+top_ssd_out3[6],Output,PIN_W28,5,B5_N1,,,,,
+top_ssd_out4[0],Output,PIN_AB19,4,B4_N0,,,,,
+top_ssd_out4[1],Output,PIN_AA19,4,B4_N0,,,,,
+top_ssd_out4[2],Output,PIN_AG21,4,B4_N2,,,,,
+top_ssd_out4[3],Output,PIN_AH21,4,B4_N2,,,,,
+top_ssd_out4[4],Output,PIN_AE19,4,B4_N1,,,,,
+top_ssd_out4[5],Output,PIN_AF19,4,B4_N1,,,,,
+top_ssd_out4[6],Output,PIN_AE18,4,B4_N2,,,,,
+top_tx_out,Output,PIN_AC15,4,B4_N2,,,,,
